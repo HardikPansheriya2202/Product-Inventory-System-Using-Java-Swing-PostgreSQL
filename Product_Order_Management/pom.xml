@@ -1,0 +1,173 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>Product_Order_Management</groupId>
+  <artifactId>Product_Order_Management</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+
+  <dependencies>
+    <!-- Apache Commons Digester (Needed by JasperReports) -->
+    <dependency>
+      <groupId>commons-digester</groupId>
+      <artifactId>commons-digester</artifactId>
+      <version>2.1</version>
+    </dependency>
+
+    <dependency>
+    <groupId>net.sf.jasperreports</groupId>
+    <artifactId>jasperreports</artifactId>
+    <version>6.20.5</version>
+</dependency>
+    <!-- Apache Commons Collections (JasperReports Dependency) -->
+    <dependency>
+      <groupId>commons-collections</groupId>
+      <artifactId>commons-collections</artifactId>
+      <version>3.2.2</version>
+    </dependency>
+
+    <!-- Apache Commons Logging (JasperReports Dependency) -->
+    <dependency>
+      <groupId>commons-logging</groupId>
+      <artifactId>commons-logging</artifactId>
+      <version>1.2</version>
+    </dependency>
+
+
+    <!-- org.json dependency (for Razorpay API) -->
+    <dependency>
+      <groupId>org.json</groupId>
+      <artifactId>json</artifactId>
+      <version>20210307</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-api</artifactId>
+      <version>2.20.0</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-core</artifactId>
+      <version>2.20.0</version>
+    </dependency>
+    
+  <dependency>
+    <groupId>com.razorpay</groupId>
+    <artifactId>razorpay-java</artifactId>
+    <version>1.4.3</version>
+</dependency>
+
+<dependency>
+    <groupId>com.stripe</groupId>
+    <artifactId>stripe-java</artifactId>
+    <version>20.110.0</version> <!-- Update this to the latest version -->
+</dependency>
+
+
+<dependency>
+    <groupId>com.google.code.gson</groupId>
+    <artifactId>gson</artifactId>
+    <version>2.8.8</version>  <!-- You can check for the latest version -->
+</dependency>
+
+
+<dependency>
+    <groupId>org.seleniumhq.selenium</groupId>
+    <artifactId>selenium-java</artifactId>
+    <version>4.9.0</version> <!-- Use the latest version -->
+</dependency>
+
+<dependency>
+    <groupId>javax.servlet</groupId>
+    <artifactId>javax.servlet-api</artifactId>
+    <version>4.0.1</version> <!-- Or the version suitable for your project -->
+    <scope>provided</scope>
+</dependency>
+
+<dependency>
+  <groupId>org.mozilla</groupId>
+  <artifactId>rhino</artifactId>
+  <version>1.7.14</version> <!-- Try a slightly newer version -->
+</dependency>
+
+<dependency>
+  <groupId>commons-io</groupId>
+  <artifactId>commons-io</artifactId>
+  <version>2.11.0</version>
+</dependency>
+
+<dependency>
+    <groupId>com.itextpdf</groupId>
+    <artifactId>itext7-core</artifactId>
+    <version>7.2.2</version>
+    <type>pom</type>
+</dependency>
+
+<dependency>
+        <groupId>com.sun.mail</groupId>
+        <artifactId>javax.mail</artifactId>
+        <version>1.6.2</version>
+    </dependency>
+    
+    <dependency>
+    <groupId>com.toedter</groupId>
+    <artifactId>jcalendar</artifactId>
+    <version>1.4</version>
+</dependency>
+
+<dependency>
+    <groupId>org.postgresql</groupId>
+    <artifactId>postgresql</artifactId>
+    <version>42.5.6</version>
+</dependency>
+
+<dependency>
+    <groupId>org.slf4j</groupId>
+    <artifactId>slf4j-api</artifactId>
+    <version>1.7.32</version>
+</dependency>
+
+<dependency>
+    <groupId>ch.qos.logback</groupId>
+    <artifactId>logback-classic</artifactId>
+    <version>1.2.6</version>
+</dependency>
+
+
+
+
+  </dependencies>
+
+  <build>
+    <sourceDirectory>src</sourceDirectory>
+    <resources>
+      <resource>
+        <directory>src</directory>
+        <excludes>
+          <exclude>**/*.java</exclude>
+        </excludes>
+      </resource>
+      
+       <resource>
+            <directory>src/main/resources</directory>
+            <includes>
+                <include>**/*.txt</include>
+                <include>**/*.properties</include>
+                <include>**/*.jasper</include>
+            </includes>
+        </resource>
+    </resources>	
+
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.8.1</version>
+        <configuration>
+          <release>17</release>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+</project>
